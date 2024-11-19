@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript Ball</title>
     <style>
-        #ball {
-            background-color: red;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            position: relative;
-        }
+      #ball {
+        background-color: red;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        position: relative;
+      }
     </style>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div id="ball"></div>
 
     <script>
-        const ball = document.getElementById("ball");
-        document.addEventListener('keydown', handleKeyPress);
-        let position = 0
-        function handleKeyPress(event) {
-            if(event.code === 'ArrowRight') {
-                position = position + 20
-                ball.style.left = position + "px";
-            }
-            else if(event.code === 'ArrowLeft') {
-                position = position - 20
-                ball.style.left = position + "px";
-            }
+      const ball = document.getElementById("ball");
+      document.addEventListener("keydown", handleKeyPress);
+      let position = 0;
+      let yPosition = 0;
+      function handleKeyPress(event) {
+        if (event.code === "ArrowRight") {
+          position = position + 20;
+          ball.style.left = position + "px";
+        } else if (event.code === "ArrowLeft") {
+          position = position - 20;
+          ball.style.left = position + "px";
+        } else if (event.code === "ArrowUp") {
+          yPosition = yPosition - 20;
+          ball.style.top = yPosition + "px";
+        } else if (event.code === "ArrowDown") {
+          yPosition = yPosition + 20;
+          ball.style.top = yPosition + "px";
         }
+      }
     </script>
-</body>
+  </body>
 </html>
