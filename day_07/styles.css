@@ -1,0 +1,11 @@
+.thesis-row {
+  line-height: 1.6;
+  padding: 15px 0;
+  font-size: 16px;
+  margin: 2px 0;
+  background-color: aliceblue;
+}
+
+.thesis-row div {
+  padding: 10px 0;
+}
