@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Inter', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.counter-wrapper {
+  display: grid;
+  grid-template-columns: 107px 107px;
+  grid-template-rows: 85px 85px;
+  gap: 30px;
+}
+
+button,
+.label {
+  font-size: 96px;
+  line-height: 85px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: 0;
+  border-radius: 20px;
+}
