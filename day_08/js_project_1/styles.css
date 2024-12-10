@@ -23,9 +23,11 @@ body {
 }
 
 button,
-.label {
+.label,
+input {
   font-size: 96px;
   line-height: 85px;
+  text-align: center;
 }
 
 button {

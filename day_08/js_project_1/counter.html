@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md">
+      <h1 class="text-3xl font-bold mb-4 text-center">Counter App</h1>
+      <div class="flex items-center justify-center space-x-4 mb-4">
+        <button
+          id="decrement"
+          class="bg-red-500 text-white px-4 py-2 rounded-md"
+        >
+          -
+        </button>
+        <span id="counter" class="text-2xl font-semibold">0</span>
+        <button
+          id="increment"
+          class="bg-green-500 text-white px-4 py-2 rounded-md"
+        >
+          +
+        </button>
+      </div>
+      <div class="flex items-center justify-center space-x-2">
+        <label for="step" class="font-medium">Step:</label>
+        <input
+          type="number"
+          id="step"
+          value="1"
+          min="1"
+          class="border rounded-md px-2 py-1 w-16 text-center"
+        />
+      </div>
+    </div>
+
+    <script>
+      const counter = document.getElementById('counter');
+      const incrementBtn = document.getElementById('increment');
+      const decrementBtn = document.getElementById('decrement');
+      const stepInput = document.getElementById('step');
+
+      let count = 0;
+
+      function updateCounter() {
+        counter.textContent = count;
+      }
+
+      incrementBtn.addEventListener('click', () => {
+        count += parseInt(stepInput.value, 10);
+        updateCounter();
+      });
+
+      decrementBtn.addEventListener('click', () => {
+        count -= parseInt(stepInput.value, 10);
+        updateCounter();
+      });
+
+      stepInput.addEventListener('change', () => {
+        if (stepInput.value < 1) {
+          stepInput.value = 1;
+        }
+      });
+    </script>
+  </body>
+</html>
