@@ -15,7 +15,8 @@ for(let button of buttons) {
             if(previousValue === "=") {
                 actions = [value];
             }
-            else {
+            else  {
+
                 actions.push(value);
             }
         }
