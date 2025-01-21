@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "photoswipe": "^5.4.4"
+    "photoswipe": "^5.4.4",
+    "star-rating.js": "^4.3.1"
   }
 }
